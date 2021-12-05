@@ -26,5 +26,5 @@ An agricultural guide  that facilitates the user's  knowledge through agricultur
 ### User Stories :
 - The user can read the information without internet .
 - All about agriculture in one app .
-- 
+
 
