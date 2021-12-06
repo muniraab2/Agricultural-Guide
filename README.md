@@ -6,25 +6,35 @@ Agricultural Guide .
 
 
 ### Project Description :
-An agricultural guide  that facilitates the user's  knowledge through agriculture , consultation request and communicating with the ministry of agriculture .
+An agricultural guide  that facilitates the user's  knowledge through agriculture ,  And knowing the correct times to plant vegetabels or fruits , And the user's can save times , And the user can also send a request to ministry of agriculture to grow plants in public places  , Consultation request and communicating with the ministry of agriculture .
 
 
 ### Features List :
-- I'm used all l learned in Swift .
-- The App associated with the ministry of agriculture and Environment .
-- Easy to learn in agriculture .
-- Easy for any user to request planting seedlings for public places .
+- Spreading Knowledge of potato cultivation .
+- The differences in the types of fertilizers .
+- Vegtables growing times in Saudi Arabia .
+- Fruits growing times in Saudi Arabia .
+- Saving planting times .
+- communicate with the ministry of Agriculture .
+- Determine the location of the user to add the planting of trees in public places to spread afforestation in Saudi Arabia .
 
 ### Define the scenes :
-- Potato cultivation methods .
-- Types of agricultural fortilizers .
-- Grow vegetables .
-- Grow Fruits .
-- Request for agricultural advice .
-- Request to plant seedlings in public places .
+- In the foreground is a video and button to start .
+- Top bar for multiple app options .
+- UI Control for planting potatoes with steps .
+- UI Control for types of Fertilizers .
+- Collectin View to display the times of vegetable cultivation in Saudi Arabia .
+- Collectin View to display the times of Fruits cultivation in Saudi Arabia .
+- Core data to saving planting time .
+- Tabel view to contact the ministry of Agriculture .
+- Add the user's location to add a request for afforestation of public places .
 
 ### User Stories :
-- The user can read the information without internet .
-- All about agriculture in one app .
+- The user can see how to grow potatoes in steps .
+- The user can see types of Fertilizers .
+- The user can read the planting times for vegetables and fruits in all Saudi cities .
+- The user can saving times to see the agriculture at the same time as his city .
+- The user can communicate with the ministry of Agriculture .
+- Easy for the user to send afforestation requests to places .
 
 
