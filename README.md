@@ -15,7 +15,7 @@ An agricultural guide  that facilitates the user's  knowledge through agricultur
 - Vegtables growing times in Saudi Arabia .
 - Fruits growing times in Saudi Arabia .
 - Saving planting times .
-- communicate with the ministry of Agriculture .
+- Can communicate with the ministry of Agriculture .
 - Determine the location of the user to add the planting of trees in public places to spread afforestation in Saudi Arabia .
 
 ### Define the scenes :
