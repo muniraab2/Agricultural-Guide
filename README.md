@@ -24,12 +24,11 @@ An agricultural guide that facilitates the user's knowledge through agriculture 
 - In the foreground is a video and button to start .
 - Firebase login : User Name , Password
 - Singnup : Email , User Name , Password 
-- Top bar for multiple app options .
-- UI Control for planting potatoes with steps .
-- UI Control for types of Fertilizers .
-- Collectin View to display the times of vegetable cultivation in Saudi Arabia .
-- Collectin View to display the times of Fruits cultivation in Saudi Arabia .
-- Tabel view to contact the ministry of Agriculture .
+- Planting potatoes with steps .
+- Types of Fertilizers .
+- Display the times of vegetable cultivation in Saudi Arabia .
+- Display the times of Fruits cultivation in Saudi Arabia .
+- A page to display the number , email , and website of  the ministry of Agriculture .
 - Add the user's location to add a request for afforestation of public places .
 
 ### User Stories :
