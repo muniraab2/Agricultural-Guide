@@ -33,11 +33,12 @@ An agricultural guide that facilitates the user's knowledge through agriculture 
 - Add the user's location to add a request for afforestation of public places .
 
 ### User Stories :
-- The user can login and singnup if he dosen't have user . 
-- The user can see how to grow potatoes in steps .
-- The user can see types of Fertilizers .
-- The user can read the planting times for vegetables and fruits in all Saudi cities .
-- The user can communicate with the ministry of Agriculture .
-- Easy for the user to send afforestation requests to places .
+- Signup: As an anon I can sign up in the App to start .
+- Login: As a user I can login to the app so that I can use the app . 
+- As an user can i see how to grow potatoes in steps .
+- As an user can i see types of Fertilizers .
+- As an user can i read the planting times for vegetables and fruits in all Saudi cities .
+- As an user can communicate with the ministry of Agriculture .
+- As an Easy for the user to send afforestation requests to places .
 
 
