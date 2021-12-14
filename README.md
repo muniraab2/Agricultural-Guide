@@ -6,25 +6,38 @@ Agricultural Guide .
 
 
 ### Project Description :
-An agricultural guide  that facilitates the user's  knowledge through agriculture , consultation request and communicating with the ministry of agriculture .
+An agricultural guide that facilitates the user's knowledge through agriculture , And knowing the correct times to plant vegetabels or fruits , And the user can also send a request to ministry of agriculture to grow plants in public places , Consultation request and communicating with the ministry of agriculture .
+
+
 
 
 ### Features List :
-- I'm used all l learned in Swift .
-- The App associated with the ministry of agriculture and Environment .
-- Easy to learn in agriculture .
-- Easy for any user to request planting seedlings for public places .
+- Firebase login and signup
+- Spreading Knowledge of potato cultivation .
+- The differences in the types of fertilizers .
+- Vegtables growing times in Saudi Arabia .
+- Fruits growing times in Saudi Arabia .
+- Can communicate with the ministry of Agriculture .
+- Determine the location of the user to add the planting of trees in public places to spread afforestation in Saudi Arabia .
 
 ### Define the scenes :
-- Potato cultivation methods .
-- Types of agricultural fortilizers .
-- Grow vegetables .
-- Grow Fruits .
-- Request for agricultural advice .
-- Request to plant seedlings in public places .
+- In the foreground is a video and button to start .
+- Firebase login : User Name , Password
+- Singnup : Email , User Name , Password 
+- Planting potatoes with steps .
+- Types of Fertilizers .
+- Display the times of vegetable cultivation in Saudi Arabia .
+- Display the times of Fruits cultivation in Saudi Arabia .
+- A page to display the number , email , and website of  the ministry of Agriculture .
+- Add the user's location to add a request for afforestation of public places .
 
 ### User Stories :
-- The user can read the information without internet .
-- All about agriculture in one app .
-- 
+- Signup: As an anon I can sign up in the App to start .
+- Login: As a user I can login to the app so that I can use the app . 
+- As an user can i see how to grow potatoes in steps .
+- As an user can i see types of Fertilizers .
+- As an user can i read the planting times for vegetables and fruits in all Saudi cities .
+- As an user can communicate with the ministry of Agriculture .
+- As an Easy for the user to send afforestation requests to places .
+
 
