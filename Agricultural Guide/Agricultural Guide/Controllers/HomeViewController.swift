@@ -16,44 +16,18 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     var selectedPlant : PlantDescribe?
     var selectedTypes : TypesOfFertilizers?
+    var choosingType = "plants"
     
     var homePlant = [Plant]()
-    let pdfView = PDFView()
-    
-    func setupPdfViewer(index: Int) {
-        
-        pdfView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(pdfView)
-        
-        pdfView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-       
-        pdfView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        
-        pdfView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
-       
-        pdfView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        
-        
-        var path: URL? = nil
-        if index == 3 {
-            path = Bundle.main.url(forResource: "3", withExtension: "pdf")
-        } else {
-            path = Bundle.main.url(forResource: "4", withExtension: "pdf")
-        }
-        if let document = PDFDocument(url: path!) {
-            pdfView.displayMode = .singlePageContinuous
-            pdfView.autoScales = true
-            pdfView.document = document
-        }
-    }
+
+    var selectedIndex: Int? 
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         HomeForCV.delegate = self
         HomeForCV.dataSource = self
-        
-        
-                         
+                  
     homePlant.append(Plant(photo: UIImage(named: "download-9")!, name: "Potato Cultivation"))
         
       homePlant.append(Plant(photo: UIImage(named: "download")!, name: "Types of Fertilizers"))
@@ -70,7 +44,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-      
+        if segue.identifier == "describHome" {
+            let distnation = segue.destination as! DescribeVC
+            distnation.choosingType = choosingType
+        } else {
+            let vc = segue.destination as? PdfVC
+            vc?.selectedIndex = selectedIndex
+        }
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -78,18 +58,24 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         switch indexPath.row {
         case 0:
             
+            choosingType = "plants"
+            
             //self.selectedPlant = PlantDescribe[indexPath.row]
            // print(selectedPlant?.nameDescribe as Any)
             performSegue(withIdentifier: "describHome", sender: nil)
         case 1:
            
-            //self.selectedTypes = TypesOfFertilizers[indexPath.row]
+            choosingType = "fertilizer"
+            
+           // self.selectedTypes = TypesOfFertilizers[indexPath.row]
             //print(selectedTypes?.nameFertilizers as Any)
             performSegue(withIdentifier: "describHome", sender: nil)
         case 2:
-            setupPdfViewer(index: 3)
+            selectedIndex = 3
+            performSegue(withIdentifier: "toPdf", sender: nil)
         case 3:
-            setupPdfViewer(index: 4)
+            selectedIndex = 4
+            performSegue(withIdentifier: "toPdf", sender: nil)
         default:
             break
         }

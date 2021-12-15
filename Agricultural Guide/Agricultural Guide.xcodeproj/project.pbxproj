@@ -22,6 +22,7 @@
 		81538D3B2760CA24008C73A4 /* NumberSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81538D3A2760CA24008C73A4 /* NumberSelector.swift */; };
 		81538D3D2760D199008C73A4 /* HomeDescribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81538D3C2760D199008C73A4 /* HomeDescribe.swift */; };
 		81538D3F2760D2A6008C73A4 /* DescribeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81538D3E2760D2A6008C73A4 /* DescribeVC.swift */; };
+		815442552769E86900DD94CD /* PdfVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815442542769E86900DD94CD /* PdfVC.swift */; };
 		81DBCB8B275F3A16007F2797 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 81DBCB8A275F3A16007F2797 /* FirebaseAnalytics */; };
 		81DBCB8D275F3A16007F2797 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 81DBCB8C275F3A16007F2797 /* FirebaseAuth */; };
 		81DBCB8F275F3A16007F2797 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 81DBCB8E275F3A16007F2797 /* FirebaseFirestore */; };
@@ -51,6 +52,7 @@
 		81538D3A2760CA24008C73A4 /* NumberSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberSelector.swift; sourceTree = "<group>"; };
 		81538D3C2760D199008C73A4 /* HomeDescribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDescribe.swift; sourceTree = "<group>"; };
 		81538D3E2760D2A6008C73A4 /* DescribeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescribeVC.swift; sourceTree = "<group>"; };
+		815442542769E86900DD94CD /* PdfVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfVC.swift; sourceTree = "<group>"; };
 		81DBCB90275F7C04007F2797 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		81DBCB92275F7C3A007F2797 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		81DBCB96275F9334007F2797 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -92,17 +94,16 @@
 		810A84B0275CA60B007298A7 /* Agricultural Guide */ = {
 			isa = PBXGroup;
 			children = (
-				810DCE8A2765E0550043DA18 /* 3.pdf */,
-				810DCE892765E0540043DA18 /* 4.pdf */,
-				81DBCB9C27609150007F2797 /* GoogleService-Info.plist */,
 				810A84C8275CD921007298A7 /* Controllers */,
 				810A84B1275CA60B007298A7 /* AppDelegate.swift */,
 				810A84B3275CA60B007298A7 /* SceneDelegate.swift */,
+				815442562769F5E700DD94CD /* Pdf */,
 				810A84D0275E2CAE007298A7 /* Background Video */,
 				810A84B7275CA60B007298A7 /* Main.storyboard */,
 				810A84BA275CA60E007298A7 /* Asets.xcassets */,
 				810A84BC275CA60E007298A7 /* LaunchScreen.storyboard */,
 				810A84BF275CA60E007298A7 /* Info.plist */,
+				81DBCB9C27609150007F2797 /* GoogleService-Info.plist */,
 			);
 			path = "Agricultural Guide";
 			sourceTree = "<group>";
@@ -114,6 +115,7 @@
 				81DBCB92275F7C3A007F2797 /* SingUpViewController.swift */,
 				81DBCB90275F7C04007F2797 /* LoginViewController.swift */,
 				81DBCB98275F93E4007F2797 /* HomeViewController.swift */,
+				815442542769E86900DD94CD /* PdfVC.swift */,
 				81DBCB96275F9334007F2797 /* HomeCollectionViewCell.swift */,
 				81538D3E2760D2A6008C73A4 /* DescribeVC.swift */,
 				810DCE9527676F8C0043DA18 /* CommunicationVC.swift */,
@@ -140,6 +142,15 @@
 				810A84C6275CCBB2007298A7 /* intro.mp4 */,
 			);
 			path = "Background Video";
+			sourceTree = "<group>";
+		};
+		815442562769F5E700DD94CD /* Pdf */ = {
+			isa = PBXGroup;
+			children = (
+				810DCE8A2765E0550043DA18 /* 3.pdf */,
+				810DCE892765E0540043DA18 /* 4.pdf */,
+			);
+			path = Pdf;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +246,7 @@
 				81DBCB97275F9334007F2797 /* HomeCollectionViewCell.swift in Sources */,
 				81538D3D2760D199008C73A4 /* HomeDescribe.swift in Sources */,
 				810DCE9627676F8C0043DA18 /* CommunicationVC.swift in Sources */,
+				815442552769E86900DD94CD /* PdfVC.swift in Sources */,
 				810DCE9027671D030043DA18 /* UserApi.swift in Sources */,
 				81FC6EC327686E3400F5F113 /* MapVC.swift in Sources */,
 				81538D3F2760D2A6008C73A4 /* DescribeVC.swift in Sources */,
@@ -387,8 +399,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K24M4BH6FS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Agricultural Guide/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to ssee current location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -399,7 +413,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.google.Agricultural-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.googlee.Agricultural-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -414,8 +428,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K24M4BH6FS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Agricultural Guide/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to ssee current location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -426,7 +442,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.google.Agricultural-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.googlee.Agricultural-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
