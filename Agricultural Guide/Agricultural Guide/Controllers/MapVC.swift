@@ -15,10 +15,10 @@ class MapVC: UIViewController , CLLocationManagerDelegate {
     
     let locationManger = CLLocationManager()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         
     }
     
@@ -57,11 +57,11 @@ class MapVC: UIViewController , CLLocationManagerDelegate {
     @IBAction func alertReceived(_ sender: Any) {
         
         let alert = UIAlertController(title: "Your Message Received , Thanks", message: "", preferredStyle: .alert)
-       
+        
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
         present(alert, animated: true)
-      
+        
     }
-                        
+    
     
 }

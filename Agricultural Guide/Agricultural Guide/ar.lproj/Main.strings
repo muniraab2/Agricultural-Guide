@@ -1,0 +1,60 @@
+
+/* Class = "UITextField"; placeholder = "Phone Number .."; ObjectID = "2pt-nm-RsF"; */
+"2pt-nm-RsF.placeholder" = "رقم الجوال ..";
+
+/* Class = "UITextField"; placeholder = "Password .."; ObjectID = "7qG-lj-DjM"; */
+"7qG-lj-DjM.placeholder" = "الرقم السري ..";
+
+/* Class = "UILabel"; text = "You can specify your location in publicplaces that can need to plant trees to spread agriculture in the Kingdom Of Saudi Arabia "; ObjectID = "DRd-dR-E8d"; */
+"DRd-dR-E8d.text" = "يمكنك تحديد موقعك في الأماكن العامة التي قد تحتاج لزراعة الأشجار لنشر الزراعة في المملكة العربية السعودية";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JCW-jm-AYv"; */
+"JCW-jm-AYv.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "JCn-tm-lJ4"; */
+"JCn-tm-lJ4.normalTitle" = "أبدأ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JVc-Ql-GDJ"; */
+"JVc-Ql-GDJ.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Singnup"; ObjectID = "Va4-am-SP5"; */
+"Va4-am-SP5.normalTitle" = "التسجيل";
+
+/* Class = "UITextField"; placeholder = "Email .."; ObjectID = "Won-T4-Iad"; */
+"Won-T4-Iad.placeholder" = "البريد الإلكتروني ..";
+
+/* Class = "UITextField"; placeholder = "User Name .."; ObjectID = "YLS-v1-1YT"; */
+"YLS-v1-1YT.placeholder" = "أسم المستخدم ..";
+
+/* Class = "UILabel"; text = "Agricultural Guide"; ObjectID = "cJ3-Zb-dX9"; */
+"cJ3-Zb-dX9.text" = "دليلك الزراعي";
+
+/* Class = "UILabel"; text = "Visit Our Website"; ObjectID = "dBY-ts-End"; */
+"dBY-ts-End.text" = "زورو موقعنا";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "eX0-aC-06w"; */
+"eX0-aC-06w.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UIButton"; configuration.title = "Received"; ObjectID = "iSQ-q9-gVp"; */
+"iSQ-q9-gVp.configuration.title" = "إرسال";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "iSQ-q9-gVp"; */
+"iSQ-q9-gVp.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Email .."; ObjectID = "iwi-4G-uAa"; */
+"iwi-4G-uAa.placeholder" = "البريد الإلكتروني ..";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "m7k-8s-c3R"; */
+"m7k-8s-c3R.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Singnup"; ObjectID = "nJp-Re-qfP"; */
+"nJp-Re-qfP.normalTitle" = "التسجيل";
+
+/* Class = "UITextField"; placeholder = "Write The Reason .."; ObjectID = "pRN-66-BIV"; */
+"pRN-66-BIV.placeholder" = "أكتب السبب ..";
+
+/* Class = "UITextField"; placeholder = "passowrd .."; ObjectID = "quX-eb-rMB"; */
+"quX-eb-rMB.placeholder" = "الرقم السري ..";
+
+/* Class = "UIButton"; normalTitle = "https://www.mewa.gov.sa/"; ObjectID = "xJD-np-mbL"; */
+"xJD-np-mbL.normalTitle" = "https://www.mewa.gov.sa/";

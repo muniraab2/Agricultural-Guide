@@ -16,8 +16,8 @@ enum  Number : String {
 }
 
 class NumberSelector: UIControl {
-
-   
+    
+    
     private let numbers : [Number] = [.one,.tow,.three,.fore]
     
     var selectedNumberIndex = 0 {
@@ -60,7 +60,9 @@ class NumberSelector: UIControl {
         
     }
     
+    
     private func configureViews(){
+        numberStackView.semanticContentAttribute = .forceLeftToRight
         self.addSubview(backView)
         self.addSubview(numberStackView)
         numberStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -97,7 +99,7 @@ class NumberSelector: UIControl {
         backView.centerXAnchor.constraint(equalTo: numberStackView.subviews.first!.centerXAnchor).isActive = true
         
     }
-   
+    
     private func animatedBackView() {
         
         UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseOut], animations: { self.backView.transform.tx = self.numberStackView.subviews[self.selectedNumberIndex].frame.origin.x
@@ -111,5 +113,5 @@ class NumberSelector: UIControl {
         sendActions(for: .valueChanged)
         
     }
-
+    
 }

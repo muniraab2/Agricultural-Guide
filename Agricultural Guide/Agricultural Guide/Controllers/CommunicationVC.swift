@@ -12,11 +12,11 @@ class CommunicationVC: UIViewController, MFMailComposeViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        }
         
+    }
     
-
+    
+    
     @IBAction func emailCllec(_ sender: Any) {
         sendEmail(recipient: ["E-Services@mewa.gov.sa"], text: "Communication with  Ministry Of Agriculture ")
     }
@@ -25,8 +25,8 @@ class CommunicationVC: UIViewController, MFMailComposeViewControllerDelegate {
         
         if let url = URL(string: "https://www.mewa.gov.sa/") {
             
-        UIApplication.shared.open(url)
-   
+            UIApplication.shared.open(url)
+            
         }
     }
     
@@ -34,7 +34,7 @@ class CommunicationVC: UIViewController, MFMailComposeViewControllerDelegate {
         
         if MFMailComposeViewController.canSendMail()
         {
-           let mail = MFMailComposeViewController()
+            let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setToRecipients(recipient)
             mail.setMessageBody(text, isHTML: false)
@@ -50,6 +50,6 @@ class CommunicationVC: UIViewController, MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
-
-
+    
+    
 }

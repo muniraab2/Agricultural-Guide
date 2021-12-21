@@ -9,7 +9,7 @@ import UIKit
 import PDFKit
 
 class PdfVC: UIViewController {
-
+    
     var selectedIndex : Int?
     var setSelectedIndex: Int?
     let pdfView = PDFView()
@@ -32,13 +32,13 @@ class PdfVC: UIViewController {
         view.addSubview(pdfView)
         
         pdfView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-       
+        
         pdfView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         
         pdfView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
-       
+        
         pdfView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-       
+        
         var path: URL? = nil
         
         if index == 3 {

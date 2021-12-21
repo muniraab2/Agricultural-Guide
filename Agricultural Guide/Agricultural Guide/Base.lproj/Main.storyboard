@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cF8-Qx-cpr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -187,7 +187,7 @@
                                 <state key="normal" title="Singnup"/>
                                 <connections>
                                     <action selector="singupButton:" destination="Ir7-8Z-S5Z" eventType="touchUpInside" id="0Ty-cf-wur"/>
-                                    <segue destination="cF8-Qx-cpr" kind="presentation" identifier="homeCV" id="uw6-Yt-F3D"/>
+                                    <segue destination="cF8-Qx-cpr" kind="presentation" identifier="describHome" id="uw6-Yt-F3D"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -242,7 +242,7 @@
                                 </constraints>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="DRd-dR-E8d">
-                                <rect key="frame" x="20" y="98" width="374" height="95.5"/>
+                                <rect key="frame" x="9.5" y="98" width="395" height="72"/>
                                 <string key="text">You can specify your location in publicplaces that can need to plant trees to spread agriculture in the Kingdom Of Saudi Arabia </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.1653659985" green="0.37179659809999999" blue="0.26262354020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -275,9 +275,9 @@
                             <constraint firstItem="6Xq-7F-2Wa" firstAttribute="trailing" secondItem="pRN-66-BIV" secondAttribute="trailing" constant="40" id="F9J-xg-Ins"/>
                             <constraint firstItem="6Xq-7F-2Wa" firstAttribute="trailing" secondItem="wVv-AR-ZEa" secondAttribute="trailing" constant="20" id="U6D-uJ-YmM"/>
                             <constraint firstItem="wVv-AR-ZEa" firstAttribute="leading" secondItem="6Xq-7F-2Wa" secondAttribute="leading" constant="20" id="c1r-nq-803"/>
-                            <constraint firstItem="6Xq-7F-2Wa" firstAttribute="trailing" secondItem="DRd-dR-E8d" secondAttribute="trailing" constant="20" id="d3i-iM-GXP"/>
+                            <constraint firstItem="6Xq-7F-2Wa" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DRd-dR-E8d" secondAttribute="trailing" id="d3i-iM-GXP"/>
                             <constraint firstItem="6Xq-7F-2Wa" firstAttribute="bottom" secondItem="iSQ-q9-gVp" secondAttribute="bottom" constant="86" id="ev6-4n-pb1"/>
-                            <constraint firstItem="DRd-dR-E8d" firstAttribute="leading" secondItem="6Xq-7F-2Wa" secondAttribute="leading" constant="20" id="hDJ-VK-dJl"/>
+                            <constraint firstItem="DRd-dR-E8d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Xq-7F-2Wa" secondAttribute="leading" id="hDJ-VK-dJl"/>
                             <constraint firstItem="iSQ-q9-gVp" firstAttribute="centerX" secondItem="4ZK-yQ-tlA" secondAttribute="centerX" id="heP-S5-w0h"/>
                             <constraint firstItem="pRN-66-BIV" firstAttribute="leading" secondItem="6Xq-7F-2Wa" secondAttribute="leading" constant="40" id="x0P-bW-cfu"/>
                         </constraints>
@@ -355,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7u-nu-8Ov" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2730" y="-1357"/>
+            <point key="canvasLocation" x="3551" y="-1351"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Ehu-yJ-4ht">

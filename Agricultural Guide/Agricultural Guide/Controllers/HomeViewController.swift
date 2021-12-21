@@ -12,31 +12,31 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var HomeForCV: UICollectionView!
     
-   // var selectedPlant: Plant?
+    
     
     var selectedPlant : PlantDescribe?
     var selectedTypes : TypesOfFertilizers?
     var choosingType = "plants"
     
     var homePlant = [Plant]()
-
+    
     var selectedIndex: Int? 
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         HomeForCV.delegate = self
         HomeForCV.dataSource = self
-                  
-    homePlant.append(Plant(photo: UIImage(named: "download-9")!, name: "Potato Cultivation"))
         
-      homePlant.append(Plant(photo: UIImage(named: "download")!, name: "Types of Fertilizers"))
+        homePlant.append(Plant(photo: UIImage(named: "download-9")!, name: "Potato Cultivation".localized))
         
-        homePlant.append(Plant(photo: UIImage(named: "images-8")!, name: "Vegetable Grower"))
+        homePlant.append(Plant(photo: UIImage(named: "download")!, name: "Types of Fertilizers".localized))
         
-       homePlant.append(Plant(photo: UIImage(named: "download-1")!, name: "Fruits Grower"))
-
-      
+        homePlant.append(Plant(photo: UIImage(named: "images-8")!, name: "Vegetable Grower".localized))
+        
+        homePlant.append(Plant(photo: UIImage(named: "download-1")!, name: "Fruits Grower".localized))
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -54,20 +54,20 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
+        
         switch indexPath.row {
         case 0:
             
             choosingType = "plants"
             
             //self.selectedPlant = PlantDescribe[indexPath.row]
-           // print(selectedPlant?.nameDescribe as Any)
+            // print(selectedPlant?.nameDescribe as Any)
             performSegue(withIdentifier: "describHome", sender: nil)
         case 1:
-           
+            
             choosingType = "fertilizer"
             
-           // self.selectedTypes = TypesOfFertilizers[indexPath.row]
+            // self.selectedTypes = TypesOfFertilizers[indexPath.row]
             //print(selectedTypes?.nameFertilizers as Any)
             performSegue(withIdentifier: "describHome", sender: nil)
         case 2:
@@ -89,8 +89,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return cell
     }
     
-   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-       return CGSize(width: self.view.frame.width * 0.45 , height: self.view.frame.width * 0.45 )
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.frame.width * 0.45 , height: self.view.frame.width * 0.45 )
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -104,15 +104,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
     }
-
-
+    
+    
 }
 
 
 struct Plant {
-  
+    
     let photo : UIImage
     let name : String
-
+    
 }
+
 
