@@ -6,20 +6,19 @@
 //
 
 import UIKit
-import MessageUI
 
-class CommunicationVC: UIViewController, MFMailComposeViewControllerDelegate {
+
+// used UIViewController to communication url agricultural guide
+
+class CommunicationVC: UIViewController {
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    
-    
-    @IBAction func emailCllec(_ sender: Any) {
-        sendEmail(recipient: ["E-Services@mewa.gov.sa"], text: "Communication with  Ministry Of Agriculture ")
-    }
+    //action button to open url
     
     @IBAction func btnAction(_ sender: Any) {
         
@@ -28,27 +27,6 @@ class CommunicationVC: UIViewController, MFMailComposeViewControllerDelegate {
             UIApplication.shared.open(url)
             
         }
-    }
-    
-    func sendEmail(recipient: [String], text: String) {
-        
-        if MFMailComposeViewController.canSendMail()
-        {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self
-            mail.setToRecipients(recipient)
-            mail.setMessageBody(text, isHTML: false)
-            
-            present(mail, animated: true, completion: nil)
-        }
-        else
-        {
-            
-        }
-    }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
     }
     
     

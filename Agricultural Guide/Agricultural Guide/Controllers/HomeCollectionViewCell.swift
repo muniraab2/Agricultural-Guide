@@ -7,6 +7,8 @@
 
 import UIKit
 
+// collection view cell for image and label for home page
+
 class HomeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var homeImage: UIImageView!

@@ -18,12 +18,12 @@
 		810DCE8C2765E0550043DA18 /* 3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 810DCE8A2765E0550043DA18 /* 3.pdf */; };
 		810DCE8E27671CED0043DA18 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810DCE8D27671CED0043DA18 /* User.swift */; };
 		810DCE9027671D030043DA18 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810DCE8F27671D030043DA18 /* UserApi.swift */; };
-		810DCE9627676F8C0043DA18 /* CommunicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810DCE9527676F8C0043DA18 /* CommunicationVC.swift */; };
+		810FF83D27784B1600799A6B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 810FF83F27784B1600799A6B /* Localizable.strings */; };
+		81244652277D91C700787BCA /* CommunicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81244651277D91C600787BCA /* CommunicationVC.swift */; };
 		81538D3B2760CA24008C73A4 /* NumberSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81538D3A2760CA24008C73A4 /* NumberSelector.swift */; };
 		81538D3D2760D199008C73A4 /* HomeDescribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81538D3C2760D199008C73A4 /* HomeDescribe.swift */; };
 		81538D3F2760D2A6008C73A4 /* DescribeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81538D3E2760D2A6008C73A4 /* DescribeVC.swift */; };
 		815442552769E86900DD94CD /* PdfVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815442542769E86900DD94CD /* PdfVC.swift */; };
-		81939E3A276A22A0005A37F0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81939E39276A22A0005A37F0 /* Localizable.strings */; };
 		81DBCB8B275F3A16007F2797 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 81DBCB8A275F3A16007F2797 /* FirebaseAnalytics */; };
 		81DBCB8D275F3A16007F2797 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 81DBCB8C275F3A16007F2797 /* FirebaseAuth */; };
 		81DBCB8F275F3A16007F2797 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 81DBCB8E275F3A16007F2797 /* FirebaseFirestore */; };
@@ -49,14 +49,16 @@
 		810DCE8A2765E0550043DA18 /* 3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 3.pdf; sourceTree = "<group>"; };
 		810DCE8D27671CED0043DA18 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		810DCE8F27671D030043DA18 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
-		810DCE9527676F8C0043DA18 /* CommunicationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationVC.swift; sourceTree = "<group>"; };
+		810FF83E27784B1600799A6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		810FF841277856F100799A6B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8124465027787C2100787BCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		81244651277D91C600787BCA /* CommunicationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationVC.swift; sourceTree = "<group>"; };
 		81538D3A2760CA24008C73A4 /* NumberSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberSelector.swift; sourceTree = "<group>"; };
 		81538D3C2760D199008C73A4 /* HomeDescribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDescribe.swift; sourceTree = "<group>"; };
 		81538D3E2760D2A6008C73A4 /* DescribeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescribeVC.swift; sourceTree = "<group>"; };
 		815442542769E86900DD94CD /* PdfVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfVC.swift; sourceTree = "<group>"; };
 		81939E37276A1448005A37F0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		81939E38276A1448005A37F0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		81939E39276A22A0005A37F0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		81DBCB90275F7C04007F2797 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		81DBCB92275F7C3A007F2797 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		81DBCB96275F9334007F2797 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -122,9 +124,10 @@
 				81DBCB98275F93E4007F2797 /* HomeViewController.swift */,
 				815442542769E86900DD94CD /* PdfVC.swift */,
 				81DBCB96275F9334007F2797 /* HomeCollectionViewCell.swift */,
+				81244651277D91C600787BCA /* CommunicationVC.swift */,
 				81538D3E2760D2A6008C73A4 /* DescribeVC.swift */,
-				810DCE9527676F8C0043DA18 /* CommunicationVC.swift */,
 				81FC6EC227686E3400F5F113 /* MapVC.swift */,
+				81538D3A2760CA24008C73A4 /* NumberSelector.swift */,
 				810A84C9275CD940007298A7 /* Model */,
 			);
 			path = Controllers;
@@ -133,7 +136,6 @@
 		810A84C9275CD940007298A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				81538D3A2760CA24008C73A4 /* NumberSelector.swift */,
 				81538D3C2760D199008C73A4 /* HomeDescribe.swift */,
 				810DCE8D27671CED0043DA18 /* User.swift */,
 				810DCE8F27671D030043DA18 /* UserApi.swift */,
@@ -161,7 +163,7 @@
 		81939E3B276A22A8005A37F0 /* Localzations */ = {
 			isa = PBXGroup;
 			children = (
-				81939E39276A22A0005A37F0 /* Localizable.strings */,
+				810FF83F27784B1600799A6B /* Localizable.strings */,
 			);
 			path = Localzations;
 			sourceTree = "<group>";
@@ -238,7 +240,7 @@
 				810DCE8C2765E0550043DA18 /* 3.pdf in Resources */,
 				81DBCB9D27609150007F2797 /* GoogleService-Info.plist in Resources */,
 				810DCE8B2765E0550043DA18 /* 4.pdf in Resources */,
-				81939E3A276A22A0005A37F0 /* Localizable.strings in Resources */,
+				810FF83D27784B1600799A6B /* Localizable.strings in Resources */,
 				810A84BB275CA60E007298A7 /* Asets.xcassets in Resources */,
 				810A84B9275CA60B007298A7 /* Main.storyboard in Resources */,
 			);
@@ -260,10 +262,10 @@
 				81538D3B2760CA24008C73A4 /* NumberSelector.swift in Sources */,
 				81DBCB97275F9334007F2797 /* HomeCollectionViewCell.swift in Sources */,
 				81538D3D2760D199008C73A4 /* HomeDescribe.swift in Sources */,
-				810DCE9627676F8C0043DA18 /* CommunicationVC.swift in Sources */,
 				815442552769E86900DD94CD /* PdfVC.swift in Sources */,
 				810DCE9027671D030043DA18 /* UserApi.swift in Sources */,
 				81FC6EC327686E3400F5F113 /* MapVC.swift in Sources */,
+				81244652277D91C700787BCA /* CommunicationVC.swift in Sources */,
 				81538D3F2760D2A6008C73A4 /* DescribeVC.swift in Sources */,
 				810DCE8E27671CED0043DA18 /* User.swift in Sources */,
 			);
@@ -277,6 +279,7 @@
 			children = (
 				810A84B8275CA60B007298A7 /* Base */,
 				81939E37276A1448005A37F0 /* ar */,
+				8124465027787C2100787BCA /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -288,6 +291,15 @@
 				81939E38276A1448005A37F0 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		810FF83F27784B1600799A6B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				810FF83E27784B1600799A6B /* en */,
+				810FF841277856F100799A6B /* ar */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

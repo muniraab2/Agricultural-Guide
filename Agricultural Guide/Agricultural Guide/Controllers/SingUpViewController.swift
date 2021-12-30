@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 import FirebaseAuth
 
+// used UIViewController for sing up user
+
 class SingUpViewController: UIViewController {
     
     @IBOutlet weak var emailSingup: UITextField!
@@ -23,6 +25,8 @@ class SingUpViewController: UIViewController {
         
     }
     
+    //func sing up for user in FirebaseAuth
+    
     func SignUp(email: String,password:String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             
@@ -30,19 +34,21 @@ class SingUpViewController: UIViewController {
             print("email:\(String(describing: authResult?.user.email))")
             print("uid:\(String(describing: authResult?.user.uid))")
             
+            //alert if user don't but email and password for sing up
+            
             if error != nil {
                 let alertSingup = UIAlertController(title: "Eroor", message: "Please SingUp for the Application", preferredStyle: .alert)
                 
                 alertSingup.addAction(UIAlertAction(title: "OK", style: .cancel))
                 
                 self.present(alertSingup, animated: true)
-            
+                
             } else {
-            
+                
                 UserApi.addUser(name: "munira", uid: authResult?.user.uid ?? "", phone: "966503646702", email: authResult?.user.email ?? "", completion:  { singup in
-                if singup {
-                    self.performSegue(withIdentifier: "describHome", sender: nil)
-                }
+                    if singup {
+                        self.performSegue(withIdentifier: "Home", sender: nil)
+                    }
                     
                 })
                 
@@ -52,12 +58,12 @@ class SingUpViewController: UIViewController {
         
     }
     
+    //button for performsegue in app
+    
     @IBAction func singupButton(_ sender: UIButton) {
         
-            
-            SignUp(email: emailSingup.text ?? "", password: paswwordSingup.text ??  "")
-
         
+        SignUp(email: emailSingup.text ?? "", password: paswwordSingup.text ??  "")
         
     }
 }

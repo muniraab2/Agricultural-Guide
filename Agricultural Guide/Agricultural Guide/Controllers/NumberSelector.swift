@@ -15,6 +15,8 @@ enum  Number : String {
     case fore
 }
 
+// used UIViewController for sing up user
+
 class NumberSelector: UIControl {
     
     

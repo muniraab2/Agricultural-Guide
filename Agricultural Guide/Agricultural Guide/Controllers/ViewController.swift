@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 
 
- // used UIViewController for play video
+// used UIViewController for play video
 
 class ViewController: UIViewController  {
     
@@ -20,11 +20,11 @@ class ViewController: UIViewController  {
     @IBOutlet weak var buttomView: UIButton!
     
     
-   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         //func to play video
         
         playVideo ()
@@ -32,6 +32,8 @@ class ViewController: UIViewController  {
         
         // Do any additional setup after loading the view.
     }
+    
+    // func for size video and play
     
     func playVideo () {
         guard let path = Bundle.main.path(forResource: "intro", ofType: "mp4") else {
@@ -42,7 +44,7 @@ class ViewController: UIViewController  {
         playerLayer.frame = self.view.bounds
         playerLayer.videoGravity = .resizeAspectFill
         self.videoBackgraound.layer.addSublayer(playerLayer)
-       
+        
         player.play()
         
         videoBackgraound.bringSubviewToFront(labelView)
@@ -51,5 +53,4 @@ class ViewController: UIViewController  {
         
     }
     
-
 }

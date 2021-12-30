@@ -8,6 +8,8 @@
 import UIKit
 import PDFKit
 
+// used UIViewController for pdf
+
 class PdfVC: UIViewController {
     
     var selectedIndex : Int?
@@ -20,12 +22,18 @@ class PdfVC: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    //override func for view did appear if user selected first and secend photo view the array setselectedindex and if user selected third and fourd photo view setupdfviewer array
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setSelectedIndex = selectedIndex
         guard let setIndex = setSelectedIndex else { return }
         setupPdfViewer(index: setIndex)
     }
+    
+    //func for constraints and view pdf
+    
     func setupPdfViewer(index: Int) {
         
         pdfView.translatesAutoresizingMaskIntoConstraints = false
