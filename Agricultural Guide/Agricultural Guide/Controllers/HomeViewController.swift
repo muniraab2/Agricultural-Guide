@@ -38,7 +38,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         homePlant.append(Plant(photo: UIImage(named: "download-1")!, name: "Fruits_Grower".localized))
         
-        
+        self.title = "Agricultural Guide in Saudi Arabia".localized
     }
     
     //number of items for view home plant array in section
@@ -46,6 +46,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return homePlant.count
     }
+    
     //prepare switch if user selesct photo and segue view
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -65,7 +66,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         switch indexPath.row {
-        
+            
         case 0:
             choosingType = "plants"
             performSegue(withIdentifier: "describHome", sender: nil)
@@ -83,7 +84,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
     }
     
-    // cell for identifier item at photo for index phath
+    // cell for identifier item at photo for index path
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = HomeForCV.dequeueReusableCell(withReuseIdentifier: "homeCV", for: indexPath) as! HomeCollectionViewCell
@@ -129,5 +130,3 @@ struct Plant {
     let name : String
     
 }
-
-

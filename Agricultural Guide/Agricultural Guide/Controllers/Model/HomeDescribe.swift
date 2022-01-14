@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+//struct image and label name and label describe
+
 struct PlantDescribe {
     
     let imageDescribe : UIImage
@@ -15,6 +17,8 @@ struct PlantDescribe {
     let describe : String
     
 }
+
+//struct image and label name and label describe
 
 struct  TypesOfFertilizers {
     

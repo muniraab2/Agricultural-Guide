@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+//class for user information
+
 class User {
     
     var name:String?
@@ -15,6 +17,9 @@ class User {
     var email: String?
     
 }
+
+//extension get user for Firebase
+
 extension User {
     
     static func getUser(dict: [String: Any]) -> User {
@@ -27,6 +32,9 @@ extension User {
         
         return user
     }
+    
+    //static func for create user for new user
+    
     static func CreateUser(phone:String,name:String,email:String) -> [String: Any] {
         
         let newUser = ["phone":phone,

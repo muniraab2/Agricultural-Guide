@@ -7,7 +7,7 @@
 
 import UIKit
 
-// collection view cell for image and label for home page
+// used collectionview cell for image and label for home page
 
 class HomeCollectionViewCell: UICollectionViewCell {
     

@@ -9,6 +9,8 @@ import UIKit
 import MapKit
 import CoreLocation
 
+// used UIViewController for map View
+
 class MapVC: UIViewController , CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -19,24 +21,36 @@ class MapVC: UIViewController , CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //localized for title in Arabic
+        
+        self.title = "Saudi Green Initiative".localized
         
     }
+    
+    //override func to desiredAccuracy and delegate and athorization and start updating for location
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         locationManger.desiredAccuracy = kCLLocationAccuracyBest
         locationManger.delegate = self
         locationManger.requestWhenInUseAuthorization()
-        locationManger.stopUpdatingLocation()
+        locationManger.startUpdatingLocation()
+        
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    //func for did updated location
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+        
+        print("location")
         if let location = locations.first {
-            locationManger.stopUpdatingLocation()
+            locationManger.startUpdatingLocation()
             
             render(location)
         }
     }
+    
+    //func reder location in latitude and logited
     
     func render(_ location: CLLocation) {
         
@@ -48,17 +62,21 @@ class MapVC: UIViewController , CLLocationManagerDelegate {
         
         mapView.setRegion(region, animated: true)
         
+        // for user to pin location in any place
+        
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
         mapView.addAnnotation(pin)
         
     }
     
+    // IBAction to recived and show alert
+    
     @IBAction func alertReceived(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Your Message Received , Thanks", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Your Message Submit , Thanks".localized, message: "", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        alert.addAction(UIAlertAction(title: "OK".localized, style: .cancel))
         present(alert, animated: true)
         
     }

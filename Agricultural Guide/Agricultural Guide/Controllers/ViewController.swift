@@ -28,12 +28,9 @@ class ViewController: UIViewController  {
         //func to play video
         
         playVideo ()
-        
-        
-        // Do any additional setup after loading the view.
     }
     
-    // func for size video and play
+    // func for size and play video
     
     func playVideo () {
         guard let path = Bundle.main.path(forResource: "intro", ofType: "mp4") else {
@@ -46,6 +43,8 @@ class ViewController: UIViewController  {
         self.videoBackgraound.layer.addSublayer(playerLayer)
         
         player.play()
+        
+        //plus i put name of project and buttom to move another screan
         
         videoBackgraound.bringSubviewToFront(labelView)
         videoBackgraound.bringSubviewToFront(buttomView)

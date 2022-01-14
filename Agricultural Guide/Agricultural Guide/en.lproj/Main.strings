@@ -39,7 +39,7 @@
 "iSQ-q9-gVp.configuration.title" = "Received";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "iSQ-q9-gVp"; */
-"iSQ-q9-gVp.normalTitle" = "Button";
+"iSQ-q9-gVp.normalTitle" = "Submit";
 
 /* Class = "UITextField"; placeholder = "Email .."; ObjectID = "iwi-4G-uAa"; */
 "iwi-4G-uAa.placeholder" = "Email ..";

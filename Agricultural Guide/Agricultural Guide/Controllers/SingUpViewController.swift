@@ -25,45 +25,95 @@ class SingUpViewController: UIViewController {
         
     }
     
+    //used advance password to sing up
+    
+    func isValidPassword(testStr:String?) -> Bool {
+        guard testStr != nil else { return false }
+        
+        // at least one uppercase,
+        // at least one digit
+        // at least one lowercase
+        // 8 characters total
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
+        return passwordTest.evaluate(with: testStr)
+    }
+    
+    //used advance Email to sing up
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
+    }
+    
+    
+    
     //func sing up for user in FirebaseAuth
     
     func SignUp(email: String,password:String) {
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+        
+        if isValidEmail(email) && isValidPassword(testStr: password) {
             
-            
-            print("email:\(String(describing: authResult?.user.email))")
-            print("uid:\(String(describing: authResult?.user.uid))")
-            
-            //alert if user don't but email and password for sing up
-            
-            if error != nil {
-                let alertSingup = UIAlertController(title: "Eroor", message: "Please SingUp for the Application", preferredStyle: .alert)
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 
-                alertSingup.addAction(UIAlertAction(title: "OK", style: .cancel))
                 
-                self.present(alertSingup, animated: true)
+                print("email:\(String(describing: authResult?.user.email))")
+                print("uid:\(String(describing: authResult?.user.uid))")
                 
-            } else {
+                //alert if user don't but email and password for sing up
                 
-                UserApi.addUser(name: "munira", uid: authResult?.user.uid ?? "", phone: "966503646702", email: authResult?.user.email ?? "", completion:  { singup in
-                    if singup {
-                        self.performSegue(withIdentifier: "Home", sender: nil)
-                    }
+                if error != nil {
                     
-                })
-                
+                    
+                    self.alertErrorSingUp(message: "Error:\(error?.localizedDescription ?? "")")
+                    
+                } else {
+                    
+                    // else if user sing up segue for home page
+                    
+                    UserApi.addUser(name: "munira", uid: authResult?.user.uid ?? "", phone: "966503646702", email: authResult?.user.email ?? "", completion:  { singup in
+                        if singup {
+                            self.performSegue(withIdentifier: "Home", sender: nil)
+                        }
+                        
+                    })
+                    
+                }
             }
             
+            
+        } else {
+            
+            //else alert for error information
+            
+            alertErrorSingUp(message: "Error Pleas put your currect information".localized)
         }
-        
     }
     
-    //button for performsegue in app
+    //func for used alert in sing up
     
-    @IBAction func singupButton(_ sender: UIButton) {
+    func alertErrorSingUp(message : String) {
+        let alertSingup = UIAlertController(title: "Error".localized, message: message , preferredStyle: .alert)
         
+        alertSingup.addAction(UIAlertAction(title: "OK".localized, style: .cancel))
         
-        SignUp(email: emailSingup.text ?? "", password: paswwordSingup.text ??  "")
+        self.present(alertSingup, animated: true)
+    }
+    
+    //button for performsegue to app
+    
+    @IBAction func singupButton(_ sender: Any) {
+        
+        let inputPasswordSingUp = paswwordSingup.text ?? ""
+        if emailSingup.text != nil && inputPasswordSingUp != "" {
+            SignUp(email: emailSingup.text ?? "", password: paswwordSingup.text ??  "")
+        } else {
+            
+            //else alert for correct sing up in app
+            
+            alertErrorSingUp(message: "Please singup with Email and Password at least one uppercase, one digit, one lowercase , 8 characters total".localized)
+        }
         
     }
 }

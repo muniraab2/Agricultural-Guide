@@ -7,6 +7,8 @@
 
 import UIKit
 
+//enum for number
+
 enum  Number : String {
     
     case one
@@ -28,6 +30,8 @@ class NumberSelector: UIControl {
         }
     }
     
+    //private let for UIControl stackview
+    
     private let numberStackView : UIStackView = {
         let stackView = UIStackView()
         stackView.axis  = .horizontal
@@ -37,6 +41,8 @@ class NumberSelector: UIControl {
         return stackView
     }()
     
+    //privete let back ground color
+    
     private let backView : UIView = {
         
         let newView = UIView()
@@ -45,15 +51,21 @@ class NumberSelector: UIControl {
         return newView
     }()
     
+    //ovveride init for frame configureViews()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureViews()
     }
     
+    //required init coder configureViews()
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureViews()
     }
+    
+    //override func back view for width size
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -62,6 +74,7 @@ class NumberSelector: UIControl {
         
     }
     
+    //private func constrain configureViews
     
     private func configureViews(){
         numberStackView.semanticContentAttribute = .forceLeftToRight
@@ -77,6 +90,8 @@ class NumberSelector: UIControl {
         configureButtons()
         
     }
+    
+    //privete func for constraint button for image hieght and width
     
     private func configureButtons(){
         
@@ -101,6 +116,8 @@ class NumberSelector: UIControl {
         backView.centerXAnchor.constraint(equalTo: numberStackView.subviews.first!.centerXAnchor).isActive = true
         
     }
+    
+    //private func for animashion
     
     private func animatedBackView() {
         

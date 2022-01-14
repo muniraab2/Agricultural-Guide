@@ -16,11 +16,16 @@ class CommunicationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //localized for title in Arabic
+        
+        self.title = "Ministry Of Agriculture".localized
+        
     }
     
     //action button to open url
     
-    @IBAction func btnAction(_ sender: Any) {
+    
+    @IBAction func buttonAction(_ sender: Any) {
         
         if let url = URL(string: "https://www.mewa.gov.sa/") {
             
@@ -28,6 +33,5 @@ class CommunicationVC: UIViewController {
             
         }
     }
-    
     
 }

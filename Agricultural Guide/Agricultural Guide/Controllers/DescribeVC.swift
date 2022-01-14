@@ -7,7 +7,7 @@
 
 import UIKit
 
-// used UIViewController for plan describe and types Of Fertilizers
+// used UIViewController for plant describe and types Of Fertilizers
 
 class DescribeVC: UIViewController {
     
@@ -42,21 +42,21 @@ class DescribeVC: UIViewController {
                               
                               TypesOfFertilizers(imageFertilizers: UIImage(named: "images-13")!, nameFertilizers: "Phosphorus_Fertilizer".localized, describeFertilizers: "Phosphorus_fertilizer_desc".localized),
                               
-                              
-                              
-                              
                               TypesOfFertilizers(imageFertilizers: UIImage(named: "download-14")!, nameFertilizers: "Organic_Fertilizers".localized, describeFertilizers: "Organic_fertilizers_desc".localized),
                               
                               
     ]
     
-    //viewdidload for UIControl 
+    //viewdidload for UIControl
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         assignValues(index: numberSelector.selectedNumberIndex)
         
+        //localized for title in Arabic
+        
+        self.title = "Agricultural Guide".localized
     }
     
     //IBAction for view
@@ -65,8 +65,6 @@ class DescribeVC: UIViewController {
         
         
         assignValues(index: numberSelector.selectedNumberIndex)
-        
-        
         
     }
     

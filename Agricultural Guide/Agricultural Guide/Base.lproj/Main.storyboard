@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -41,7 +43,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="JCn-tm-lJ4" firstAttribute="leading" secondItem="5bF-Q9-R3R" secondAttribute="leading" constant="170" id="1El-4C-amF"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cJ3-Zb-dX9" secondAttribute="trailing" id="EZG-CZ-aX1"/>
@@ -81,7 +82,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download-6" translatesAutoresizingMaskIntoConstraints="NO" id="pKI-CD-5pC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download-6" translatesAutoresizingMaskIntoConstraints="NO" id="pKI-CD-5pC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email .." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iwi-4G-uAa">
@@ -98,20 +99,19 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX0-aC-06w">
-                                <rect key="frame" x="140" y="591" width="134" height="30"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <rect key="frame" x="140" y="591" width="134" height="31"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Login"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                 <connections>
                                     <action selector="loginButton:" destination="cT1-js-Zpu" eventType="touchUpInside" id="t3q-Td-DvD"/>
-                                    <segue destination="cF8-Qx-cpr" kind="presentation" identifier="Home" id="Px4-uB-kk3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJp-Re-qfP">
-                                <rect key="frame" x="120" y="647" width="174" height="30"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <rect key="frame" x="120" y="648" width="174" height="31"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Singnup"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Singnup"/>
                                 <connections>
                                     <action selector="singup:" destination="cT1-js-Zpu" eventType="touchUpInside" id="Wyv-Ji-EyV"/>
                                     <segue destination="Ir7-8Z-S5Z" kind="show" identifier="singUp" id="ZTr-th-mSp"/>
@@ -119,7 +119,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IGk-Lf-qVM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iwi-4G-uAa" firstAttribute="top" secondItem="IGk-Lf-qVM" secondAttribute="top" constant="472" id="3MO-fF-S5Z"/>
                             <constraint firstItem="pKI-CD-5pC" firstAttribute="top" secondItem="EiW-av-44p" secondAttribute="top" id="5nn-mV-CFi"/>
@@ -143,6 +143,7 @@
                     <connections>
                         <outlet property="emailLogin" destination="iwi-4G-uAa" id="zjL-va-w9a"/>
                         <outlet property="passwordLogin" destination="quX-eb-rMB" id="Wir-6S-gtX"/>
+                        <segue destination="cF8-Qx-cpr" kind="presentation" identifier="Home" id="y1C-hm-IvL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dh6-VR-iPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -182,13 +183,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Va4-am-SP5">
-                                <rect key="frame" x="120" y="490" width="174" height="30"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <rect key="frame" x="120" y="490" width="174" height="31"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Singnup"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Singnup"/>
                                 <connections>
                                     <action selector="singupButton:" destination="Ir7-8Z-S5Z" eventType="touchUpInside" id="0Ty-cf-wur"/>
-                                    <segue destination="cF8-Qx-cpr" kind="presentation" identifier="Home" id="zlt-kw-KQZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -222,13 +222,14 @@
                         <outlet property="paswwordSingup" destination="7qG-lj-DjM" id="MKr-Ae-8Ug"/>
                         <outlet property="phoneNumberSingup" destination="2pt-nm-RsF" id="exz-kD-QT7"/>
                         <outlet property="userNameSingup" destination="YLS-v1-1YT" id="7uS-AZ-vvP"/>
+                        <segue destination="cF8-Qx-cpr" kind="presentation" identifier="Home" id="eqY-1L-ULF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvM-hK-CcW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="104" y="66"/>
         </scene>
-        <!--MapVC-->
+        <!--Saudi Green Initiative-->
         <scene sceneID="bnj-2w-Ck5">
             <objects>
                 <viewController id="RhH-S7-L4P" customClass="MapVC" customModule="Agricultural_Guide" customModuleProvider="target" sceneMemberID="viewController">
@@ -237,32 +238,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wVv-AR-ZEa">
-                                <rect key="frame" x="20" y="201" width="374" height="380"/>
+                                <rect key="frame" x="20" y="202" width="374" height="423"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="380" id="tvH-uT-wCJ"/>
+                                    <constraint firstAttribute="height" constant="423" id="tvH-uT-wCJ"/>
                                 </constraints>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="DRd-dR-E8d">
-                                <rect key="frame" x="2.5" y="98" width="409" height="64.5"/>
-                                <string key="text">You can specify your location in public places that can need to plant trees to spread agriculture in the Kingdom Of Saudi Arabia </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.26262637972831726" green="0.55560505390167236" blue="0.10855823010206223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write The Reason .." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pRN-66-BIV">
-                                <rect key="frame" x="40" y="622" width="334" height="34"/>
+                                <rect key="frame" x="40" y="671" width="334" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="13J-bB-k4f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="DRd-dR-E8d">
+                                <rect key="frame" x="20" y="109" width="374" height="64.5"/>
+                                <string key="text">You can specify your location in public places that can need to plant trees to spread agriculture in the Kingdom Of Saudi Arabia </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.26262637972831726" green="0.55560505390167236" blue="0.10855823010206223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSQ-q9-gVp">
-                                <rect key="frame" x="165.5" y="696" width="83" height="31"/>
+                                <rect key="frame" x="172" y="736" width="70" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Received">
+                                <buttonConfiguration key="configuration" style="gray" title="Submit">
                                     <color key="baseForegroundColor" systemColor="linkColor"/>
-                                    <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="alertReceived:" destination="RhH-S7-L4P" eventType="touchUpInside" id="z1j-Eq-b2T"/>
@@ -270,23 +270,25 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Xq-7F-2Wa"/>
-                        <color key="backgroundColor" red="0.98414152860641479" green="0.99240583181381226" blue="0.97999769449234009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
                         <constraints>
-                            <constraint firstItem="iSQ-q9-gVp" firstAttribute="top" secondItem="pRN-66-BIV" secondAttribute="bottom" constant="40" id="2uz-mk-7tC"/>
+                            <constraint firstItem="iSQ-q9-gVp" firstAttribute="top" secondItem="pRN-66-BIV" secondAttribute="bottom" constant="31" id="2uz-mk-7tC"/>
+                            <constraint firstItem="6Xq-7F-2Wa" firstAttribute="trailing" secondItem="DRd-dR-E8d" secondAttribute="trailing" constant="20" id="76F-XZ-mdQ"/>
                             <constraint firstItem="DRd-dR-E8d" firstAttribute="centerX" secondItem="4ZK-yQ-tlA" secondAttribute="centerX" id="7S8-DH-hXT"/>
-                            <constraint firstItem="DRd-dR-E8d" firstAttribute="top" secondItem="6Xq-7F-2Wa" secondAttribute="top" constant="10" id="COt-WG-hON"/>
-                            <constraint firstItem="pRN-66-BIV" firstAttribute="top" secondItem="wVv-AR-ZEa" secondAttribute="bottom" constant="41" id="EHO-V5-MRO"/>
+                            <constraint firstItem="DRd-dR-E8d" firstAttribute="top" secondItem="6Xq-7F-2Wa" secondAttribute="top" constant="21" id="COt-WG-hON"/>
+                            <constraint firstItem="pRN-66-BIV" firstAttribute="top" secondItem="wVv-AR-ZEa" secondAttribute="bottom" constant="46" id="EHO-V5-MRO"/>
+                            <constraint firstItem="DRd-dR-E8d" firstAttribute="leading" secondItem="6Xq-7F-2Wa" secondAttribute="leading" constant="20" id="Exy-iC-B7Q"/>
                             <constraint firstItem="6Xq-7F-2Wa" firstAttribute="trailing" secondItem="pRN-66-BIV" secondAttribute="trailing" constant="40" id="F9J-xg-Ins"/>
                             <constraint firstItem="6Xq-7F-2Wa" firstAttribute="trailing" secondItem="wVv-AR-ZEa" secondAttribute="trailing" constant="20" id="U6D-uJ-YmM"/>
                             <constraint firstItem="wVv-AR-ZEa" firstAttribute="leading" secondItem="6Xq-7F-2Wa" secondAttribute="leading" constant="20" id="c1r-nq-803"/>
                             <constraint firstItem="6Xq-7F-2Wa" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DRd-dR-E8d" secondAttribute="trailing" id="d3i-iM-GXP"/>
-                            <constraint firstItem="6Xq-7F-2Wa" firstAttribute="bottom" secondItem="iSQ-q9-gVp" secondAttribute="bottom" constant="86" id="ev6-4n-pb1"/>
+                            <constraint firstItem="6Xq-7F-2Wa" firstAttribute="bottom" secondItem="iSQ-q9-gVp" secondAttribute="bottom" constant="46" id="ev6-4n-pb1"/>
                             <constraint firstItem="DRd-dR-E8d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Xq-7F-2Wa" secondAttribute="leading" id="hDJ-VK-dJl"/>
                             <constraint firstItem="iSQ-q9-gVp" firstAttribute="centerX" secondItem="4ZK-yQ-tlA" secondAttribute="centerX" id="heP-S5-w0h"/>
                             <constraint firstItem="pRN-66-BIV" firstAttribute="leading" secondItem="6Xq-7F-2Wa" secondAttribute="leading" constant="40" id="x0P-bW-cfu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8HV-oZ-Cbr"/>
+                    <navigationItem key="navigationItem" title="Saudi Green Initiative" id="8HV-oZ-Cbr"/>
                     <connections>
                         <outlet property="mapView" destination="wVv-AR-ZEa" id="eoI-Rd-3u4"/>
                     </connections>
@@ -295,7 +297,7 @@
             </objects>
             <point key="canvasLocation" x="2730.434782608696" y="758.70535714285711"/>
         </scene>
-        <!--CommunicationVC-->
+        <!--Ministry Of Agriculture-->
         <scene sceneID="Htl-jF-Tat">
             <objects>
                 <viewController id="ZRO-Rl-uda" customClass="CommunicationVC" customModule="Agricultural_Guide" customModuleProvider="target" sceneMemberID="viewController">
@@ -303,45 +305,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="k2F-Mo-hJJ">
-                                <rect key="frame" x="20" y="88" width="374" height="225"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visit Our Website" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBY-ts-End">
-                                <rect key="frame" x="20" y="390" width="374" height="29"/>
+                                <rect key="frame" x="20" y="434" width="374" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <color key="textColor" systemColor="systemBrownColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJD-np-mbL">
-                                <rect key="frame" x="80" y="459" width="254" height="64"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="https://www.mewa.gov.sa/"/>
-                                <buttonConfiguration key="configuration" style="filled" title="https://www.mewa.gov.sa/">
-                                    <color key="baseForegroundColor" systemColor="linkColor"/>
-                                    <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
-                                </buttonConfiguration>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhy-o6-0KX">
+                                <rect key="frame" x="60" y="498" width="294" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="3Yf-98-daP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="https://www.mewa.gov.sa/"/>
                                 <connections>
-                                    <action selector="btnAction:" destination="ZRO-Rl-uda" eventType="touchUpInside" id="B1B-V4-E38"/>
+                                    <action selector="buttonAction:" destination="ZRO-Rl-uda" eventType="touchUpInside" id="a7W-jt-IR8"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="k2F-Mo-hJJ">
+                                <rect key="frame" x="20" y="139" width="374" height="225"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Yz-cl-8uM"/>
-                        <color key="backgroundColor" red="0.98414152860641479" green="0.99240583181381226" blue="0.97999769449234009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
                         <constraints>
-                            <constraint firstItem="4Yz-cl-8uM" firstAttribute="trailing" secondItem="xJD-np-mbL" secondAttribute="trailing" constant="80" id="09h-VF-kSX"/>
                             <constraint firstItem="dBY-ts-End" firstAttribute="leading" secondItem="4Yz-cl-8uM" secondAttribute="leading" constant="20" id="1Rb-Cu-h25"/>
                             <constraint firstItem="k2F-Mo-hJJ" firstAttribute="leading" secondItem="4Yz-cl-8uM" secondAttribute="leading" constant="20" id="1Xb-oW-fFF"/>
                             <constraint firstItem="4Yz-cl-8uM" firstAttribute="trailing" secondItem="dBY-ts-End" secondAttribute="trailing" constant="20" id="4ji-VS-3TY"/>
-                            <constraint firstItem="xJD-np-mbL" firstAttribute="top" secondItem="dBY-ts-End" secondAttribute="bottom" constant="40" id="8cl-n7-n3M"/>
-                            <constraint firstItem="k2F-Mo-hJJ" firstAttribute="top" secondItem="4Yz-cl-8uM" secondAttribute="top" id="9xE-fF-gJL"/>
-                            <constraint firstItem="xJD-np-mbL" firstAttribute="leading" secondItem="4Yz-cl-8uM" secondAttribute="leading" constant="80" id="Ccz-9k-eiW"/>
+                            <constraint firstItem="k2F-Mo-hJJ" firstAttribute="top" secondItem="4Yz-cl-8uM" secondAttribute="top" constant="51" id="9xE-fF-gJL"/>
+                            <constraint firstItem="4Yz-cl-8uM" firstAttribute="trailing" secondItem="Lhy-o6-0KX" secondAttribute="trailing" constant="60" id="BPp-xU-7Pw"/>
                             <constraint firstItem="4Yz-cl-8uM" firstAttribute="trailing" secondItem="k2F-Mo-hJJ" secondAttribute="trailing" constant="20" id="FuA-21-Q1R"/>
-                            <constraint firstItem="dBY-ts-End" firstAttribute="top" secondItem="k2F-Mo-hJJ" secondAttribute="bottom" constant="77" id="yzU-Ov-L5O"/>
-                            <constraint firstItem="4Yz-cl-8uM" firstAttribute="bottom" secondItem="xJD-np-mbL" secondAttribute="bottom" constant="290" id="zK0-db-Sco"/>
+                            <constraint firstItem="Lhy-o6-0KX" firstAttribute="leading" secondItem="4Yz-cl-8uM" secondAttribute="leading" constant="60" id="Td6-CA-UUq"/>
+                            <constraint firstItem="Lhy-o6-0KX" firstAttribute="top" secondItem="dBY-ts-End" secondAttribute="bottom" constant="35" id="dt8-al-K2M"/>
+                            <constraint firstItem="dBY-ts-End" firstAttribute="top" secondItem="k2F-Mo-hJJ" secondAttribute="bottom" constant="70" id="yzU-Ov-L5O"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="WtW-lb-pYM"/>
+                    <navigationItem key="navigationItem" title="Ministry Of Agriculture" id="WtW-lb-pYM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ujt-UW-dcQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -363,7 +362,7 @@
             </objects>
             <point key="canvasLocation" x="3551" y="-1351"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Agricultural Guide in Saudi Arabia-->
         <scene sceneID="Ehu-yJ-4ht">
             <objects>
                 <viewController id="iw0-LT-bYu" customClass="HomeViewController" customModule="Agricultural_Guide" customModuleProvider="target" sceneMemberID="viewController">
@@ -373,7 +372,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="m0i-jp-46E">
                                 <rect key="frame" x="100" y="88" width="214" height="725"/>
-                                <color key="backgroundColor" red="0.98414152860641479" green="0.99240583181381226" blue="0.97999769449234009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="Color"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="632-kq-PUt">
                                     <size key="itemSize" width="210" height="148"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -396,7 +395,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="75O-ok-eoq"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" red="0.26262637972831726" green="0.55560505390167236" blue="0.10855823010206223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -421,7 +420,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B0g-Yb-Gn4"/>
-                        <color key="backgroundColor" red="0.98414152860641479" green="0.99240583181381226" blue="0.97999769449234009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
                         <constraints>
                             <constraint firstItem="m0i-jp-46E" firstAttribute="bottom" secondItem="B0g-Yb-Gn4" secondAttribute="bottom" id="Ibe-nX-bkw"/>
                             <constraint firstItem="m0i-jp-46E" firstAttribute="top" secondItem="B0g-Yb-Gn4" secondAttribute="top" id="MZz-7l-s2V"/>
@@ -429,7 +428,7 @@
                             <constraint firstItem="m0i-jp-46E" firstAttribute="leading" secondItem="B0g-Yb-Gn4" secondAttribute="leading" constant="100" id="ccK-ki-iJv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zSs-6Z-qzl"/>
+                    <navigationItem key="navigationItem" title="Agricultural Guide in Saudi Arabia" id="zSs-6Z-qzl"/>
                     <connections>
                         <outlet property="HomeForCV" destination="m0i-jp-46E" id="aSG-sw-g9d"/>
                         <segue destination="FcO-BZ-7XX" kind="show" identifier="describHome" id="54m-4r-J36"/>
@@ -440,7 +439,7 @@
             </objects>
             <point key="canvasLocation" x="2730.434782608696" y="-684.375"/>
         </scene>
-        <!--DescribeVC-->
+        <!--Agricultural Guide-->
         <scene sceneID="Lya-5D-BL3">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="FcO-BZ-7XX" customClass="DescribeVC" customModule="Agricultural_Guide" customModuleProvider="target" sceneMemberID="viewController">
@@ -460,12 +459,12 @@
                                     <constraint firstAttribute="height" constant="213" id="sQf-Q6-6r2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.37235277891159058" green="0.61276614665985107" blue="0.13286340236663818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="Color-describe"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jH4-fx-dez" customClass="NumberSelector" customModule="Agricultural_Guide" customModuleProvider="target">
                                 <rect key="frame" x="79" y="706" width="268" height="107"/>
-                                <color key="backgroundColor" red="0.98414152860641479" green="0.99240583181381226" blue="0.97999769449234009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="107" id="PK7-fo-TeZ"/>
                                 </constraints>
@@ -484,12 +483,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7k-8s-c3R">
                                 <rect key="frame" x="30" y="448" width="272" height="81"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.26262637972831726" green="0.55560505390167236" blue="0.10855823010206223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="Color-Tital"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nVD-E2-bir"/>
-                        <color key="backgroundColor" red="0.98414152860641479" green="0.99240583181381226" blue="0.97999769449234009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Color"/>
                         <constraints>
                             <constraint firstItem="jH4-fx-dez" firstAttribute="trailing" secondItem="nVD-E2-bir" secondAttribute="trailing" constant="-67" id="06H-Re-8fc"/>
                             <constraint firstItem="ypt-XM-ipQ" firstAttribute="top" secondItem="nVD-E2-bir" secondAttribute="top" constant="66" id="4m3-XL-eTN"/>
@@ -509,7 +508,7 @@
                             <constraint firstItem="nVD-E2-bir" firstAttribute="trailing" secondItem="JVc-Ql-GDJ" secondAttribute="trailing" constant="20" id="vTf-Ne-d17"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1xb-FC-OAc"/>
+                    <navigationItem key="navigationItem" title="Agricultural Guide" id="1xb-FC-OAc"/>
                     <connections>
                         <outlet property="describe" destination="JVc-Ql-GDJ" id="iM8-Ii-Hz3"/>
                         <outlet property="imageDescribe" destination="ypt-XM-ipQ" id="44C-hM-skl"/>
@@ -599,7 +598,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zlt-kw-KQZ"/>
+        <segue reference="eqY-1L-ULF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="download-6" width="828" height="1792"/>
@@ -607,11 +606,17 @@
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="images" width="225" height="225"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <namedColor name="Color">
+            <color red="0.98400002717971802" green="0.99300003051757812" blue="0.97399997711181641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-Tital">
+            <color red="0.033000003546476364" green="0.2720000147819519" blue="0.015000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-describe">
+            <color red="0.23800000548362732" green="0.46200001239776611" blue="0.10600000619888306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -8,6 +8,8 @@
 import Foundation
 import FirebaseFirestore
 
+//clase user Api to add user and create user in FirebaseFirestore and save data 
+
 class UserApi {
     
     static func addUser(name:String,uid:String,phone:String,email:String,completion: @escaping (Bool) -> Void) {
