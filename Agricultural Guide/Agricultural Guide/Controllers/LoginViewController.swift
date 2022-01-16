@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if let user  = Auth.auth().currentUser {
             print(user.email ?? "")
-            //   performSegue(withIdentifier: "Home", sender: nil)
+           //   performSegue(withIdentifier: "Home", sender: nil)
         }
     }
     
