@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround() 
     }
     
     // override func if user login with correct email and password segue to homa page
@@ -94,6 +94,9 @@ class LoginViewController: UIViewController {
         self.present(alertLogin, animated: true)
         
     }
+    
+
+    
     //button for performsegue in app
     
     @IBAction func loginButton(_ sender: Any) {
@@ -118,4 +121,18 @@ class LoginViewController: UIViewController {
         
     }
     
+}
+
+// extenshon for dismiss Keyboard
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
