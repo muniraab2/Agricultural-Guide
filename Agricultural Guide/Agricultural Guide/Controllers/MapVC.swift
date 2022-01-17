@@ -24,7 +24,7 @@ class MapVC: UIViewController , CLLocationManagerDelegate {
         //localized for title in Arabic
         
         self.title = "Saudi Green Initiative".localized
-        
+        self.hideKeyboardWhenTappedAround()
     }
     
     //override func to desiredAccuracy and delegate and athorization and start updating for location
