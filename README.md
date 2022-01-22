@@ -40,4 +40,4 @@ An agricultural guide that facilitates the user's knowledge through agriculture 
 - As an user can communicate with the ministry of Agriculture .
 - As an Easy for the user to send afforestation requests to places .
 
-
+my presentation https://www.canva.com/design/DAE1-47ebXI/dxBkPT0Ic92_qDx2QZuRMg/view?utm_content=DAE1-47ebXI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
